@@ -18780,192 +18780,9 @@ const jN = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AA
 //     })
 // }
 
-// function Cf() {
-//     const [activeTab, setActiveTab] = j.useState(0);
-//     const [tabData, setTabData] = j.useState([]);
-
-//     j.useEffect(() => {
-//         fetchData();
-//     }, []);
-
-//     const fetchData = async () => {
-//         try {
-//             const response = await Ua.get("http://localhost:7000/api/jobs");
-//             const data = response.data;
-//             const groupedData = groupDataByTabTitle(data);
-//             setTabData(groupedData);
-//         } catch (error) {
-//             console.error("Error fetching jobs data:", error);
-//         }
-//     };
-
-//     const groupDataByTabTitle = (data) => {
-//         console.log("raw data", data);
-//         const grouped = data.reduce((acc, job) => {
-//             if (!acc[job.tabTitle]) acc[job.tabTitle] = [];
-//             acc[job.tabTitle].push(job);
-//             return acc;
-//         }, {});
-//         console.log("grouped data", grouped);
-//         return Object.keys(grouped).map(tabTitle => ({
-//             tabTitle,
-//             cards: grouped[tabTitle].map(job => ({
-//                 id: job.id,
-//                 location: job.location,
-//                 title: job.title,
-//                 content: job.content,
-//                 post: job.post
-//             }))
-//         }));
-//     };
-
-//     const testimonials = [
-//         {
-//             id: 1,
-//             author: "Alfisha Khan",
-//             authorDescription: "Technical Business Manager Working since 2017",
-//             quote: "During my 6 years at SixD, I've cultivated invaluable skills in technical expertise, team and task management, and adaptive problem-solving. The collaborative atmosphere has been instrumental in shaping me into a resourceful and versatile leader."
-//         }, {
-//             id: 2,
-//             author: "Vaibhav Tyagi ",
-//             authorDescription: "Assistant General Manager Working since 2014",
-//             quote: "I have spent 9 glorious years with SixD's highly experienced team, which has facilitated my personal and professional growth, from technical insights to honing my sales profile. Working on diverse projects at different levels has allowed me to grasp intricate details. A big thanks to the SixD family for this incredible journey."
-//         }, {
-//             id: 3,
-//             author: "Kalia Bastia",
-//             authorDescription: "Senior Manager - Engineering Services Working since 2021 ",
-//             quote: "The challenges with complex laser scan data have nurtured my expertise in 3D modelling, emphasizing the value of technical proficiency and effective collaboration. SixD provides a great platform for both personal and professional growth."
-//         }, {
-//             id: 4,
-//             author: "Shri Ram Raghuveer",
-//             authorDescription: "Laser Scanning Expert Working since 2018",
-//             quote: "SixD is a great place to work, offering ample opportunities for personal and professional growth. Starting my journey as a Laser Scanning professional, I am now proud to have become an expert in the field."
-//         }, {
-//             id: 5,
-//             author: "Pavan Kumar",
-//             authorDescription: "Accounts and Finance Working since 2013",
-//             quote: "I am happy with my growth in SixD, especially with the company's emphasis on creating a friendly work environment that fosters professional development."
-//         }, {
-//             id: 6,
-//             author: "Suraj Prakash Pandey",
-//             authorDescription: "Assistant Manager - Power Plants Working since 2023",
-//             quote: "SixD has been instrumental in reinforcing the essence of setting clear goals, continuous learning, networking, and the importance of skill enhancement throughout my professional journey. "
-//         }, {
-//             id: 7,
-//             author: "Nidhi Bharti",
-//             authorDescription: "Business Development Manager Working since 2022",
-//             quote: "At SIXD, I've honed my skills and expertise, gaining a comprehensive understanding of project processes, and technical intricacies, and fostering unwavering client relationships."
-//         }, {
-//             id: 8,
-//             author: "Manmeet Kaur",
-//             authorDescription: "Business Developer Working since 2016",
-//             quote: "My tenure at SixD has been marked by a commitment to learning and growing from every project, nurturing a mindset of constant personal and professional development."
-//         }, {
-//             id: 9,
-//             author: "Gaurav Singhal",
-//             authorDescription: "Project Coordinator Working since 2023",
-//             quote: "“SixD has been instrumental in nurturing my personal and professional growth, enabling me to excel in client relations, team management, and fostering a cohesive team spirit. The empowering atmosphere has instilled in me the confidence to uphold commitments and deliver exceptional results."
-//         }, {
-//             id: 10,
-//             author: "Alfisha Khan",
-//             authorDescription: "Technical Business Manager Working since 2017",
-//             quote: "“During my 6 years at SixD, I've cultivated invaluable skills in technical expertise, team and task management, and adaptive problem-solving. The collaborative atmosphere has been instrumental in shaping me into a resourceful and versatile leader.”"
-//         }
-//     ];
-
-//     return i.jsx(i.Fragment, {
-//         children: i.jsxs("section", {
-//             className: "hero-jobs",
-//             children: [
-//                 i.jsx("div", { className: "scret" }),
-//                 i.jsx("div", {
-//                     className: "jobs-cnt",
-//                     children: i.jsxs("div", {
-//                         className: "jobs-content-wrap",
-//                         children: [
-//                             i.jsx("h1", {
-//                                 className: "font-face-futur-HV",
-//                                 children: "Experience growth, impact, and well-being at the workplace."
-//                             }),
-//                             i.jsxs("div", {
-//                                 className: "searchjob",
-//                                 children: [
-//                                     i.jsx("input", {
-//                                         type: "text",
-//                                         placeholder: "Search by job roles, keyword",
-//                                         className: "searchjobitem font-face-futur-BK"
-//                                     }),
-//                                     i.jsxs("svg", {
-//                                         xmlns: "http://www.w3.org/2000/svg",
-//                                         width: "20",
-//                                         height: "23",
-//                                         viewBox: "0 0 20 23",
-//                                         fill: "none",
-//                                         children: [
-//                                             i.jsx("circle", {
-//                                                 cx: "9.20565",
-//                                                 cy: "9.20565",
-//                                                 r: "8.12985",
-//                                                 stroke: "#292929",
-//                                                 "stroke-width": "2.15159"
-//                                             }),
-//                                             i.jsx("rect", {
-//                                                 x: "13.0039",
-//                                                 y: "16.5801",
-//                                                 width: "1.63275",
-//                                                 height: "7.97823",
-//                                                 transform: "rotate(-38.2738 13.0039 16.5801)",
-//                                                 fill: "#292929"
-//                                             })
-//                                         ]
-//                                     })
-//                                 ]
-//                             }),
-//                             i.jsx("section", {
-//                                 children: i.jsxs("div", {
-//                                     className: "tabs-container",
-//                                     children: [
-//                                         i.jsx("div", {
-//                                             className: "tabs-nav",
-//                                             children: tabData.map((tab, index) => i.jsx("div", {
-//                                                 className: `tab-nav-item font-face-futur-md-bt ${index === activeTab ? "active" : ""}`,
-//                                                 style: { cursor: "pointer" },
-//                                                 onClick: () => setActiveTab(index),
-//                                                 children: tab.tabTitle
-//                                             }, index))
-//                                         }),
-//                                         i.jsx("div", {
-//                                             className: "tab-content-career",
-//                                             children: i.jsx(Xp, {
-//                                                 data: tabData,
-//                                                 activeTab: activeTab
-//                                             })
-//                                         })
-//                                     ]
-//                                 })
-//                             }),
-//                             i.jsx("section", {
-//                                 className: "testi",
-//                                 children: i.jsx(wN, {})
-//                             })
-//                         ]
-//                     })
-//                 }),
-//                 i.jsx("section", {
-//                     className: "quotesmy",
-//                     children: i.jsx(wp, {
-//                         slides: testimonials
-//                     })
-//                 })
-//             ]
-//         })
-//     });
-// }
-
 function Cf() {
     const [activeTab, setActiveTab] = j.useState(0);
     const [tabData, setTabData] = j.useState([]);
-    const [searchQuery, setSearchQuery] = j.useState("");
 
     j.useEffect(() => {
         fetchData();
@@ -19002,16 +18819,7 @@ function Cf() {
         }));
     };
 
-    // Filter tabData based on search query
-    const filteredTabData = tabData.map(tab => ({
-        ...tab,
-        cards: tab.cards.filter(card =>
-            card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            card.content.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-    }));
-
-     const testimonials = [
+    const testimonials = [
         {
             id: 1,
             author: "Alfisha Khan",
@@ -19085,9 +18893,7 @@ function Cf() {
                                     i.jsx("input", {
                                         type: "text",
                                         placeholder: "Search by job roles, keyword",
-                                        className: "searchjobitem font-face-futur-BK",
-                                        value: searchQuery,
-                                        onChange: (e) => setSearchQuery(e.target.value)
+                                        className: "searchjobitem font-face-futur-BK"
                                     }),
                                     i.jsxs("svg", {
                                         xmlns: "http://www.w3.org/2000/svg",
@@ -19121,7 +18927,7 @@ function Cf() {
                                     children: [
                                         i.jsx("div", {
                                             className: "tabs-nav",
-                                            children: filteredTabData.map((tab, index) => i.jsx("div", {
+                                            children: tabData.map((tab, index) => i.jsx("div", {
                                                 className: `tab-nav-item font-face-futur-md-bt ${index === activeTab ? "active" : ""}`,
                                                 style: { cursor: "pointer" },
                                                 onClick: () => setActiveTab(index),
@@ -19131,7 +18937,7 @@ function Cf() {
                                         i.jsx("div", {
                                             className: "tab-content-career",
                                             children: i.jsx(Xp, {
-                                                data: filteredTabData,
+                                                data: tabData,
                                                 activeTab: activeTab
                                             })
                                         })
@@ -19155,7 +18961,6 @@ function Cf() {
         })
     });
 }
-
 
 
 const bN = "/assets/frame1-cb52fe24.gif",
@@ -19497,7 +19302,7 @@ function Gp({
     const [n, t] = j.useState(null);
     return j.useEffect(() => {
         Ua.get(`http://localhost:7000/api/jobs/${e}`).then(r => {
-           
+            console.log("====>",r.data), t(r.data)
         }).catch(r => {
             console.error("Error fetching job data:", r)
         })
